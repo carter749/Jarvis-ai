@@ -1,33 +1,139 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jarvis AI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background: #101827;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 { color: #38bdf8; }
-        iframe {
-            width: 100%;
-            max-width: 900px;
-            height: 650px;
-            border: none;
-            border-radius: 12px;
-            background: white;
-        }
-    </style>
-</head>
-<body>
-    <h1>JARVIS AI</h1>
-    <p>Your personal AI assistant</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JARVIS AI</title>
 
-    <iframe
-        src="https://cf77b9fefd9054a332.gradio.live">
-    </iframe>
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #10243d, #030711 75%);
+    color: #d9f7ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 25px 10px;
+    border-bottom: 1px solid #174d70;
+    box-shadow: 0 0 20px #087eaa44;
+}
+
+h1 {
+    color: #65dcff;
+    letter-spacing: 8px;
+    font-size: 32px;
+    text-shadow: 0 0 18px #00bfff;
+    margin: 5px;
+}
+
+.subtitle {
+    color: #829dbb;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.status {
+    color: #69f5ce;
+    font-size: 12px;
+    margin-top: 12px;
+    letter-spacing: 3px;
+}
+
+.reactor {
+    width: 145px;
+    height: 145px;
+    margin: 30px auto 20px;
+    border: 3px solid #28cfff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px #00bfff,
+                inset 0 0 25px #00bfff66;
+    animation: glow 3s infinite alternate;
+    position: relative;
+}
+
+.reactor:before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 2px dashed #a16cff;
+    border-radius: 50%;
+    animation: spin 12s linear infinite;
+}
+
+.core {
+    width: 55px;
+    height: 55px;
+    background: #5de5ff;
+    border-radius: 50%;
+    box-shadow: 0 0 35px #00cfff;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #00bfff; }
+    to { box-shadow: 0 0 35px #00bfff, 0 0 60px #795cff; }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.section-title {
+    color: #70dfff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin: 25px 0 12px;
+}
+
+.chat-frame {
+    width: 94%;
+    max-width: 950px;
+    height: 650px;
+    border: 1px solid #20bfff;
+    border-radius: 14px;
+    box-shadow: 0 0 22px #008cff44;
+    background: white;
+}
+
+footer {
+    padding: 25px;
+    color: #587b9a;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>J.A.R.V.I.S.</h1>
+    <div class="subtitle">JUST A RATHER VERY INTELLIGENT SYSTEM</div>
+    <div class="status">● SYSTEM ONLINE</div>
+</header>
+
+<div class="reactor">
+    <div class="core"></div>
+</div>
+
+<div class="section-title">PERSONAL AI ASSISTANT</div>
+
+<iframe
+    class="chat-frame"
+    src="https://cf77b9fefd9054a332.gradio.live">
+</iframe>
+
+<footer>
+    JARVIS AI SYSTEMS • INTERFACE VERSION 2.0
+</footer>
+
 </body>
 </html>
